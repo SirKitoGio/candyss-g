@@ -26,63 +26,33 @@ export default function Reservation() {
     return (
         <section
             id="reservation"
-            style={{
-                minHeight: '100vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '100%',
-                padding: '10rem 1.5rem 8rem',
-                position: 'relative',
-                pointerEvents: 'auto',
-            }}
+            className="min-h-screen flex items-center justify-center w-full px-4 md:px-6 py-24 md:py-40 pointer-events-auto relative"
         >
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.15 }}
+                className="w-full max-w-2xl bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 px-6 py-8 md:px-10 md:py-12 flex flex-col gap-8 md:gap-10 relative z-10"
                 style={{
-                    maxWidth: '600px',
-                    width: '100%',
-                    ...glassCardStyle,
-                    padding: '3rem 2.5rem',
-                    position: 'relative',
-                    zIndex: 1,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '2.5rem',
+                    boxShadow: '0 32px 64px rgba(0,0,0,0.4)',
                 }}
             >
                 {/* Header */}
-                <div style={{ textAlign: 'center' }}>
+                <div className="text-center">
                     <motion.div
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
                         viewport={{ once: true }}
-                        style={{
-                            width: '56px', height: '56px', borderRadius: '16px',
-                            background: 'linear-gradient(135deg, #0284c7, #0369a1)',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            margin: '0 auto 1.2rem',
-                            boxShadow: '0 8px 32px rgba(2,132,199,0.3)',
-                        }}
+                        className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-sky-600 to-sky-800 flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg shadow-sky-600/30"
                     >
-                        <Utensils size={26} color="#fff" />
+                        <Utensils className="w-6 h-6 md:w-7 md:h-7 text-white" />
                     </motion.div>
-                    <h2 style={{
-                        fontSize: '2.6rem', color: '#f8fafc',
-                        fontFamily: "'Playfair Display', serif",
-                        fontWeight: 700, margin: 0, letterSpacing: '-0.5px',
-                    }}>
+                    <h2 className="text-3xl md:text-4xl text-slate-50 font-display font-bold m-0 tracking-tight">
                         Reserve a Table
                     </h2>
-                    <p style={{
-                        color: '#7dd3fc', fontSize: '0.8rem',
-                        letterSpacing: '0.2em', textTransform: 'uppercase',
-                        fontWeight: 600, marginTop: '0.5rem',
-                    }}>
+                    <p className="text-sky-300 text-xs md:text-sm tracking-widest uppercase font-semibold mt-2">
                         Join us in the deep
                     </p>
                 </div>

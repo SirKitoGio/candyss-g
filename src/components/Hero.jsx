@@ -37,11 +37,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-display text-6xl md:text-9xl font-bold tracking-tight mb-4"
+          className="font-display text-5xl md:text-9xl font-bold tracking-tight mb-4"
           style={{ color: '#2f3b5e' }}
         >
           Candy's <br />
-          <span className="text-4xl md:text-6xl text-slate-600 mt-4 block">
+          <span className="text-3xl md:text-6xl text-slate-600 mt-2 md:mt-4 block">
             Seafood and Grill
           </span>
         </motion.h1>
@@ -50,15 +50,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-10"
+          className="flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-3 mb-10"
           style={{ color: '#4a5a7a' }}
         >
           <span className="flex items-center gap-1.5 text-sm font-medium">
-            <MapPin size={15} />
-            Abelarde St., Zone 3, Cadiz City
+            <MapPin size={15} className="shrink-0" />
+            <span className="text-center">Abelarde St., Zone 3, Cadiz City</span>
           </span>
           <span className="flex items-center gap-1.5 text-sm font-medium">
-            <Phone size={15} />
+            <Phone size={15} className="shrink-0" />
             0995 263 3426
           </span>
         </motion.div>

@@ -4,16 +4,16 @@ import { inputStyle, labelStyle, handleFocus, handleBlur } from './ui/formStyles
 
 export default function ReservationForm({ form, handleChange, handleSubmit }) {
     return (
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6 md:gap-8">
 
             {/* SECTION: GUEST DETAILS */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <h4 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 600, letterSpacing: '0.05em', margin: 0 }}>Guest Details</h4>
-                    <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(255,255,255,0.1), transparent)' }} />
+            <div className="flex flex-col gap-4 md:gap-5">
+                <div className="flex items-center gap-3">
+                    <h4 className="text-slate-50 text-sm md:text-base font-semibold tracking-wider m-0">Guest Details</h4>
+                    <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.2rem' }}>
+                <div className="grid grid-cols-1 gap-4 md:gap-5">
                     <div>
                         <label style={labelStyle}>Full Name</label>
                         <input
@@ -28,7 +28,7 @@ export default function ReservationForm({ form, handleChange, handleSubmit }) {
                         />
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
                         <div>
                             <label style={labelStyle}>Email</label>
                             <input
@@ -61,13 +61,13 @@ export default function ReservationForm({ form, handleChange, handleSubmit }) {
             </div>
 
             {/* SECTION: RESERVATION DETAILS */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <h4 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 600, letterSpacing: '0.05em', margin: 0 }}>Reservation Details</h4>
-                    <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(255,255,255,0.1), transparent)' }} />
+            <div className="flex flex-col gap-4 md:gap-5">
+                <div className="flex items-center gap-3">
+                    <h4 className="text-slate-50 text-sm md:text-base font-semibold tracking-wider m-0">Reservation Details</h4>
+                    <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                         <label style={labelStyle}><CalendarDays size={14} /> Date</label>
                         <input

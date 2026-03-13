@@ -21,14 +21,7 @@ export default function ContactInfo() {
     };
 
     return (
-        <div style={{
-            marginTop: '0.5rem',
-            paddingTop: '2rem',
-            borderTop: '1px solid rgba(255,255,255,0.06)',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
-        }}>
+        <div className="mt-4 pt-6 border-t border-white/10 flex flex-col md:flex-row gap-6 md:gap-10">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#cbd5e1' }}>
                 <div style={iconBoxStyle}>
                     <MapPin size={20} />
