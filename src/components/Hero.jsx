@@ -33,18 +33,18 @@ export default function Hero() {
         style={{ y: textY, opacity }}
         className="relative z-10 flex flex-col items-center text-center px-4"
       >
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="font-display text-5xl md:text-9xl font-bold tracking-tight mb-4"
-          style={{ color: '#2f3b5e' }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
+          className="mb-2 md:-mt-"
         >
-          Candy's <br />
-          <span className="text-3xl md:text-6xl text-slate-600 mt-2 md:mt-4 block">
-            Seafood and Grill
-          </span>
-        </motion.h1>
+          <img
+            src="/Word_logo.png"
+            alt="Candy's Seafood and Grill"
+            className="w-full max-w-[320px] md:max-w-[800px] h-auto object-contain drop-shadow-xl"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -54,11 +54,11 @@ export default function Hero() {
           style={{ color: '#4a5a7a' }}
         >
           <span className="flex items-center gap-1.5 text-sm font-medium">
-            <MapPin size={15} className="shrink-0" />
+            <MapPin size={20} className="shrink-0" />
             <span className="text-center">Abelarde St., Zone 3, Cadiz City</span>
           </span>
           <span className="flex items-center gap-1.5 text-sm font-medium">
-            <Phone size={15} className="shrink-0" />
+            <Phone size={20} className="shrink-0" />
             0995 263 3426
           </span>
         </motion.div>

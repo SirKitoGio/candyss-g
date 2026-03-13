@@ -31,6 +31,13 @@ export default function MenuLayout() {
           boxShadow: '0 32px 64px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2)',
         }}
       >
+        <div className="flex justify-center mb-0 md:-mb-2">
+          <img
+            src="/Word_logo.png"
+            alt="Candy's Seafood and Grill Logo"
+            className="w-48 h-auto md:w-64 lg:w-[400px] object-contain"
+          />
+        </div>
         <h2 className="text-4xl md:text-5xl text-center text-slate-50 mb-2 font-display font-bold tracking-tight">
           Our Menu!
         </h2>

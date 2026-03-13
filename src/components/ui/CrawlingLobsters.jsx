@@ -67,10 +67,13 @@ export default function CrawlingLobsters() {
             for (let i = 0; i < numLobsters; i++) {
                 const isFacingRight = Math.random() > 0.5;
 
+                // For Mobile screens (roughly < 768px), we make the scale about 35% smaller
+                const baseScale = window.innerWidth < 768 ? 0.35 : 0.6;
+
                 newLobsters.push({
                     id: i,
                     bottom: Math.random() * 15, // Hug the floor closely
-                    scale: Math.random() * 0.4 + 0.6,
+                    scale: Math.random() * (baseScale * 0.6) + baseScale,
                     duration: Math.random() * 40 + 50, // Much slower, relaxed crawl
                     delay: Math.random() * -40,
                     isFacingRight: isFacingRight,

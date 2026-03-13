@@ -45,9 +45,13 @@ export default function Reservation() {
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-sky-600 to-sky-800 flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg shadow-sky-600/30"
+                        className="flex justify-center mb-0 md:-mb-2"
                     >
-                        <Utensils className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                        <img
+                            src="/Word_logo.png"
+                            alt="Candy's Seafood and Grill Logo"
+                            className="w-48 h-auto md:w-64 lg:w-[400px] object-contain"
+                        />
                     </motion.div>
                     <h2 className="text-3xl md:text-4xl text-slate-50 font-display font-bold m-0 tracking-tight">
                         Reserve a Table
